@@ -23,7 +23,9 @@ class App extends React.Component {
 	}
 
 	handleClick = () => {
-		this.setState(() => ({ edit: !this.state.edit }))
+		let toBeDestroy = () => ({ edit: !this.state.edit });
+		this.setState(toBeDestroy);
+		toBeDestroy = null;
 	}
 
 	render() {
